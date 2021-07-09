@@ -199,7 +199,8 @@ header #sign-up-button {
 .features {
   position: relative;
   z-index: -2;
-  height: 635px;
+  padding-top: 165px;
+  padding-bottom: 180px;
   background-color: #F5FCFD;
 }
 .features .features__cards {
@@ -211,7 +212,6 @@ header #sign-up-button {
           justify-content: center;
 }
 .features .features__cards .features__cards__card {
-  margin-top: 165px;
   padding-top: 40px;
   background-color: white;
   text-align: center;
@@ -242,7 +242,7 @@ header #sign-up-button {
   font-size: 16px;
 }
 .features .features__cards .features__cards__card:nth-child(2) {
-  margin-top: 215px;
+  margin-top: 50px;
 }
 
 .about {
