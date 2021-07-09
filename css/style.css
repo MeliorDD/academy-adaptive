@@ -12,6 +12,7 @@ ul {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 header {
@@ -19,6 +20,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+}
+header .header__container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,7 +33,6 @@ header {
           justify-content: space-between;
 }
 header .header__logo {
-  margin-left: 136px;
   min-width: 179px;
   height: 100px;
   border-bottom-right-radius: 21.5px;
@@ -55,6 +60,12 @@ header .header__menu ul {
           justify-content: space-between;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 header .header__menu ul :first-child {
   color: #0F7BFF;
@@ -63,7 +74,7 @@ header #sign-up-button {
   min-width: 165px;
   height: 50px;
   padding-top: 15px;
-  margin: 25px 140px 0 52px;
+  margin: 25px 0 0 52px;
   background-color: #0063DD;
   border-radius: 25px;
   text-align: center;
@@ -75,6 +86,7 @@ header #sign-up-button {
 
 .first-block {
   height: 1029px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,12 +101,8 @@ header #sign-up-button {
       -ms-flex-align: center;
           align-items: center;
 }
-.first-block svg {
-  position: absolute;
-  z-index: -100;
-}
 .first-block .first-block__elements {
-  width: 655px;
+  max-width: 655px;
   height: 239px;
   text-align: center;
   display: -webkit-box;
@@ -105,10 +113,17 @@ header #sign-up-button {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 188px;
-  margin-bottom: 121px;
+  margin-bottom: 108px;
 }
 .first-block .first-block__elements p {
-  padding: 30px 0;
+  margin: 30px 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #929292;
 }
 .first-block .first-block__elements .first-block__elements__buttons {
   display: -webkit-box;
@@ -158,6 +173,8 @@ header #sign-up-button {
 }
 
 .features {
+  position: relative;
+  z-index: -2;
   height: 635px;
   background-color: #F5FCFD;
 }
@@ -174,7 +191,7 @@ header #sign-up-button {
   padding-top: 40px;
   background-color: white;
   text-align: center;
-  width: 362px;
+  max-width: 362px;
   height: 290px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,10 +213,85 @@ header #sign-up-button {
   margin: 25px 0;
 }
 .features .features__cards .features__cards__card p {
-  width: 333px;
+  max-width: 333px;
   font-weight: 300;
   font-size: 16px;
 }
 .features .features__cards .features__cards__card:nth-child(2) {
   margin-top: 215px;
+}
+
+.about {
+  max-width: 1162px;
+  margin: 0 auto;
+  padding: 60px 0 116px 0;
+}
+.about h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.about p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 35px;
+}
+.about a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0063DD;
+}
+.about a svg {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  margin-left: 15px;
+}
+.about .about__block1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 233px;
+  position: relative;
+}
+.about .about__block1 .about__block__content {
+  padding-top: 94px;
+  max-width: 476px;
+}
+.about .about__block1 .back {
+  position: absolute;
+  top: -120px;
+  left: -80px;
+  z-index: -1;
+}
+.about .about__block2 {
+  max-width: 1048px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.about .about__block2 .about__block__content {
+  max-width: 543px;
+  padding-top: 99px;
+}
+.about .about__block2 .back {
+  position: absolute;
+  top: -20px;
+  right: -180px;
+  z-index: -1;
 }

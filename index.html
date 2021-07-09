@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Adaptive</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <div class="header__logo">
-            AppSon
-        </div>
-        <div class="header__menu">
-            <ul>
-                <li>Home</li>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>Pages</li>
-            </ul>
-            <a href="#" id="sign-up-button">Sign up</a>
+        <div class="header__container">
+            <a class="header__logo">
+                AppSon
+            </a>
+            <div class="header__menu">
+                <ul>
+                    <li>Home</li>
+                    <li>Features</li>
+                    <li>Pricing</li>
+                    <li>Pages</li>
+                </ul>
+                <a href="#" id="sign-up-button">Sign up</a>
+            </div>
         </div>
     </header>
-    <div class="first-block">
-        <svg  width="1920" height="1054" viewBox="0 0 1920 1054" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <section class="first-block">
+        <!-- <svg  width="1920" height="1054" viewBox="0 0 1920 1054" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d)">
             <path d="M140.5 928.588C88 945 24.5 991.5 0 1029L1920 1028.59V0H1659.5C1538 0 1519.5 295 1447.5 370.5C1352.05 470.587 1308.1 470.587 1127.14 470.587H1126.5C870.5 470.587 756.618 791.655 465.5 872.087C261 928.588 263.456 890.152 140.5 928.588Z" fill="url(#paint0_linear)"/>
             </g>
@@ -45,40 +49,91 @@
             <stop offset="1" stop-color="#0063DD"/>
             </linearGradient>
             </defs>
-        </svg>
+        </svg> -->
         <div class="first-block__elements">
             <h1>Best Desktop App for You</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.</p>
             <div class="first-block__elements__buttons">
                 <a href="#" id="download-button">Download</a>
                 <a href="#" id="free-trial-button">Free Trial</a>
             </div>
         </div>
         <img class="first-block__devices" src="images/Devices.png"/> 
-        <img id="scroll-down-button"src="images/Scrol Down.png" alt="scroll">
+        <img id="scroll-down-button"src="images/Scrol Down.svg" alt="scroll">
         
-    </div>
-    <div class="features">
+    </section>
+
+    <section class="features">
         <div class="features__cards">
             <div class="features__cards__card">
-                <img src="images/Icon1.png" alt="">
+                <img src="images/Icon1.svg" alt="">
                 <h3>Analysis</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore</p>
             </div>
             <div class="features__cards__card">
-                <img src="images/Icon2.png" alt="">
+                <img src="images/Icon2.svg" alt="">
                 <h3>Clean Design</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore</p>
             </div>
             <div class="features__cards__card">
-                <img src="images/Icon3.png" alt="">
+                <img src="images/Icon3.svg" alt="">
                 <h3>Messaging</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore</p>
             </div>
         </div>
-    </div>
-    <div class="about">
+    </section>
 
-    </div>
+    <section class="about">
+        <div class="about__block1">
+            <img src="images/easy_msg.png" width="558" height="373" alt="">
+            <img class="back" src="images/Back1.svg" alt="">
+            <div class="about__block__content">
+                <h3>Easy Messaging</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.</p>
+                <a>Read More <svg width="68" height="16" viewBox="0 0 68 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M67.7071 8.70711C68.0976 8.31658 68.0976 7.68342 67.7071 7.29289L61.3431 0.928932C60.9526 0.538408 60.3195 0.538408 59.9289 0.928932C59.5384 1.31946 59.5384 1.95262 59.9289 2.34315L65.5858 8L59.9289 13.6569C59.5384 14.0474 59.5384 14.6805 59.9289 15.0711C60.3195 15.4616 60.9526 15.4616 61.3431 15.0711L67.7071 8.70711ZM0 9H67V7H0V9Z" fill="#0063DD"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="about__block2">
+            <div class="about__block__content">
+                <h3>Keep In Touch</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.</p>
+                <a>Read More <svg width="68" height="16" viewBox="0 0 68 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M67.7071 8.70711C68.0976 8.31658 68.0976 7.68342 67.7071 7.29289L61.3431 0.928932C60.9526 0.538408 60.3195 0.538408 59.9289 0.928932C59.5384 1.31946 59.5384 1.95262 59.9289 2.34315L65.5858 8L59.9289 13.6569C59.5384 14.0474 59.5384 14.6805 59.9289 15.0711C60.3195 15.4616 60.9526 15.4616 61.3431 15.0711L67.7071 8.70711ZM0 9H67V7H0V9Z" fill="#0063DD"/>
+                    </svg>
+                </a>
+            </div>
+            <img src="images/keep_on_touch.png" alt="">
+            <img class="back" src="images/Back1.svg" alt="">
+        </div>
+    </section>
+
+    <section class="how-does-it-works">
+        <h2>How Does It Works?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+        <ul class="how-does-it-works__list">
+            <li class="how-does-it-works__list__item">
+                <img src="" alt="">
+                <h3>Create An Account</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod.</p>
+            </li>
+            <li class="how-does-it-works__list__item">
+                <img src="" alt="">
+                <h3>Confirm Email</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod.</p>
+            </li>
+            <li class="how-does-it-works__list__item">
+                <img src="" alt="">
+                <h3>See Results</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="price">
+
+    </section>
 </body>
 </html>
