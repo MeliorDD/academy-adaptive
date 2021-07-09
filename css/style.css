@@ -299,7 +299,9 @@ header #sign-up-button {
 }
 
 .how-does-it-works {
-  max-width: 1113px;
+  position: relative;
+  z-index: -2;
+  background-color: #F5FCFD;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,6 +331,7 @@ header #sign-up-button {
   margin-bottom: 45px;
 }
 .how-does-it-works .how-does-it-works__list {
+  max-width: 1113px;
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

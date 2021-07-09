@@ -257,7 +257,9 @@ header{
     
 }
 .how-does-it-works{
-    max-width: 1113px;
+    position: relative;
+    z-index: -2;
+    background-color: #F5FCFD;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -279,6 +281,7 @@ header{
         margin-bottom: 45px;
     }
     .how-does-it-works__list{
+        max-width: 1113px;
         position: relative;
         display: inline-flex;
         .how-does-it-works__list__item{
