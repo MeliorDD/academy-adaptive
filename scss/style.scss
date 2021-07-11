@@ -1,12 +1,58 @@
 $colorOne: #0F7BFF;
 $colorTwo: #0063DD;
 
+@mixin button{
+    width: 165px;
+    height: 50px;
+    padding-top:13px;
+    border-radius: 25px;
+    border:2px solid currentColor;
+    color: $colorOne;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: all .4s ease;
+    &:hover{
+        background-color: $colorOne;
+        color: white;
+    }
+}
+
+@mixin button-with-svg{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0063DD;
+    svg{
+        transform: translateY(2px);
+        margin-left: 15px;
+    }
+    &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $colorOne;
+        opacity: 0;
+        transition: all .4s ease;
+    }
+    &:hover::after{
+        opacity: 1;
+    }
+}
+
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
 }
 ul{
     list-style: none;
@@ -25,7 +71,6 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    
     .header__container{
         max-width: 1330px;
         margin: 0 auto;
@@ -60,31 +105,23 @@ header{
             line-height: 20px;
             letter-spacing: 0em;
             text-align: left;
-
-            :first-child{
-                color: $colorOne;
+            li{
+                transition: all .4s ease;
+                &:hover{
+                    color: $colorOne;
+                }
             }
         }
     }
     #sign-up-button{
-        min-width: 165px;
-        height: 50px;
-        padding-top:15px;
+        @include button;
         margin: 25px 0 0 52px;
-        background-color: $colorTwo;
-        border-radius: 25px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 500;
-        text-transform: uppercase;
-        color:white;
     }
 }
 
 .first-block{
-    // background-image: url("../images/Vector1.png");
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    background-image: url("../images/Vector1.png");
+    background-repeat: no-repeat;
     height: 1029px;
     width: 100%;
     display: flex;
@@ -92,11 +129,6 @@ header{
     justify-content: space-between;
     align-items: center;
     padding-top: 188px;
-    
-    // svg{
-    //     position: absolute;
-    //     z-index: -100;
-    // }
     .first-block__elements{
         max-width: 655px;
         height: 239px;
@@ -116,35 +148,17 @@ header{
         .first-block__elements__buttons{
             display: flex;
             justify-content: center;
+            a{
+                @include button;
+            }
+            #download-button{
+                margin-right: 30px;
+            }
         }
-        #download-button{
-            width: 166px;
-            height: 50px;
-            background-color: $colorOne;
-            border-radius: 25px;
-            padding-top:15px;
-            font-size: 16px;
-            font-weight: 500;
-            text-transform: uppercase;
-            color:white;
-        }
-        #free-trial-button{
-            min-width: 166px;
-            height: 50px;
-            border:2px solid $colorOne;
-            color: $colorOne;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: 500;
-            text-transform: uppercase;
-            padding-top:12px;
-            margin-left: 30px;
-        }
-        
     }
     .first-block__devices{
         position: relative;
-        z-index: -10;
+        z-index: 1;
     }
     #scroll-down-button{
         position: absolute;
@@ -157,10 +171,10 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 3;
         &::after{
             content: '';
             position: absolute;
-            z-index: -1;
             width: 70px;
             height: 70px;
             border-radius: 50%;
@@ -175,7 +189,7 @@ header{
 
 .features{
     position: relative;
-    z-index: -2;
+    z-index: 2;
     padding-top: 165px;
     padding-bottom: 180px;
     background-color: #F5FCFD;
@@ -183,7 +197,6 @@ header{
         display: flex;
         justify-content: center;
         .features__cards__card{
-            //margin-top: 165px;
             padding-top: 40px;
             background-color: white;
             text-align: center;
@@ -215,6 +228,7 @@ header{
     max-width: 1162px;
     margin: 0 auto;
     padding: 60px 0 116px 0;
+
     h3{
         font-size: 32px;
         font-weight: 500;
@@ -232,23 +246,22 @@ header{
         margin-bottom: 35px;
     }
     a{
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #0063DD;
-        svg{
-            transform: translateY(2px);
-            margin-left: 15px;
-        }
+        @include button-with-svg;
     }
     
     .about__block1{
         display:flex;
-        justify-content: space-between;
         margin-bottom: 233px;
         position: relative;
+        
+        .about__block1__image{
+            max-height: 373px;
+            max-width: 100%;
+            margin-right: 128px;
+            object-fit:contain;
+            position: relative;
+            z-index: 3;
+        }
         .about__block__content{
             padding-top: 94px;
             max-width: 476px;
@@ -257,32 +270,42 @@ header{
             position: absolute;
             top:-120px;
             left: -80px;
-            z-index: -1;
+            z-index: 2;
+            
         }
     }
     .about__block2{
         max-width: 1048px;
         display:flex;
-        justify-content: space-between;
         position: relative;
+
+        .about__block2__image{
+            max-height: 408px;
+            max-width: 100%;
+
+        }
         .about__block__content{
             max-width: 543px;
             padding-top: 99px;
+            margin-right: 143px;
+
         }
         .back{
             position: absolute;
             top:-20px;
             right: -180px;
             z-index: -1;
+            
         }
     }
     
 }
 .how-does-it-works{
+    
+    margin-right:0 ;
     position: relative;
     z-index: -2;
     background-color: #F5FCFD;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -364,33 +387,29 @@ header{
         .price__pricing-plan__buttons{
             white-space: nowrap;
         }
-        #monthly-button{
-            display: inline-block;
-            padding-top: 14px;
-            width: 164px;
-            height: 50px;
-            text-align: center;
-            color: white;
-            background: #0F7BFF;
-            border-radius: 25px 0px 0px 25px;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 20px;
-        }
-        #yearly-button{
+        a{
             display: inline-block;
             padding-top: 11px;
             width: 164px;
             height: 50px;
             text-align: center;
             color: #0F7BFF;
-            border: 3px solid currentColor;
-            box-sizing: border-box;
-            border-radius: 0px 25px 25px 0px;
+            border: 3px solid #0F7BFF;
             font-size: 16px;
             font-weight: 700;
             line-height: 20px;
-            transform: translateX(-5px);
+            transition: all .4s ease;
+            &:hover{
+                color: white;
+                background-color: $colorOne;
+            }
+        }
+        #monthly-button{
+            border-radius: 25px 0px 0px 25px;
+        }
+        #yearly-button{
+            border-radius: 0px 25px 25px 0px;
+            transform: translateX(-7px);
         }
     }
     .price__rate{
@@ -459,31 +478,73 @@ header{
             }
         }
         #try-now__premium{
-            width: 166px;
-            height: 50px;
-            background: #0F7BFF;
-            border-radius: 25px;
-            text-align: center;
-            padding-top: 15px;
-            color: white;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 20px;
+            @include button;
         }
         #try-now__standart{
-            width: 166px;
-            height: 50px;
-            border-radius: 25px;
-            text-align: center;
-            padding-top: 14px;
-            color: #0F7BFF;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 20px;
-            border: 2px solid #0F7BFF;
-            box-sizing: border-box      
+            @include button;    
         }
     }
+}
+
+.testimonials{
+    background: #F5FCFD;
+    .testimonials__container{
+        max-width: 1920px;
+        margin: 0 auto;
+        display: flex;
+        overflow: hidden;
+    }
+    img{
+        margin-right: 90px;
+        max-height: 601px;
+        max-width: 100%;
+    }
+    .testimonials__content{
+        padding-top: 113px;
+        padding-bottom: 144px;
+    }
+    h2{
+        margin-bottom: 40px;
+    }
+    .testimonials__content__carusel{
+        display: flex;
+        margin-bottom: 37px;
+    }
+    .testimonials__content__carusel__slide{
+        width: 362px;
+        padding: 40px 0 39px 30px;
+        box-shadow: 0px 4px 20px rgba(0, 70, 156, 0.08);
+        border-radius: 5px;
+        margin-right: 30px;
+    }
+    input[type="radio"]{
+        display: none;
+    }
+    .navigation{
+        display: flex;
+        .bar{
+            width: 12px;
+            height: 12px;
+            border: 1.6px solid #0063DD;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: all .4s ease;
+            &:hover{
+                transform: scale(1.2);
+            }
+            
+        }
+        input:checked + .bar{
+            width: 38.4px;
+            background-color: $colorTwo;
+            border-radius: 32px
+        }
+        // #r2:checked + .first-slide{
+        //     margin-left: -392px;
+        // }
+    }
+    
 }
 
 .latest-news{
@@ -511,7 +572,6 @@ header{
     .latest-news__posts{
         width: 100%;
         display: flex;
-        // justify-content: space-between;
         .latest-news__posts__post1
         {
             max-width: 558px;
@@ -536,14 +596,7 @@ header{
                 line-height: 24px;
             }
             #continue-reading{
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 24px;
-                color: #0063DD;
-                svg{
-                    transform: translateY(2px);
-                    margin-left: 15px;
-                }
+                @include button-with-svg;
             }
         }
         .post{
@@ -596,19 +649,30 @@ header{
         line-height: 24px;
     }
     #free-trial-button2{
-        padding-top: 14px;
+        padding-top: 13px;
         text-align: center;
         min-width: 264px;
         height: 50px;
-        background: $colorOne;
+        color: $colorOne;
+        border:2px solid currentColor;
         border-radius: 25px;
         font-size: 16px;
         font-weight: 700;
         line-height: 20px;
-        color: white;
+        transition: all .4s ease;
         svg{
             transform: translateY(2px);
             margin-left: 13px;
+            fill: $colorOne;
+            transition: all .4s ease;
+        }
+        &:hover{
+            color: white;
+            background: $colorOne;
+            svg{
+                fill:white;
+            }
+            
         }
     }
 }
@@ -652,6 +716,12 @@ header{
         color: $colorOne;
         text-transform: uppercase;
         transform: translateX(-4px) translateY(2px);
+        transition: all .4s ease;
+        &:hover{
+            color: white;
+            background-color: $colorTwo;
+            border: 3px solid white;
+        }
     }
 }
 footer{
@@ -677,5 +747,19 @@ footer{
         display: flex;
         justify-content: space-between;
         margin-right: 84px;
+   }
+   .footer__social-media{
+       max-width: 97px;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-right: 160px;
+   }
+   #scroll-up{
+       transition: all .4s ease;
+       &:hover{
+        transform: scale(1.2);
+       }
    }
 }

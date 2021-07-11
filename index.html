@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="header__container">
             <a class="header__logo">
                 AppSon
@@ -30,26 +30,6 @@
     </header>
 
     <section class="first-block">
-        <!-- <svg  width="1920" height="1054" viewBox="0 0 1920 1054" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d)">
-            <path d="M140.5 928.588C88 945 24.5 991.5 0 1029L1920 1028.59V0H1659.5C1538 0 1519.5 295 1447.5 370.5C1352.05 470.587 1308.1 470.587 1127.14 470.587H1126.5C870.5 470.587 756.618 791.655 465.5 872.087C261 928.588 263.456 890.152 140.5 928.588Z" fill="url(#paint0_linear)"/>
-            </g>
-            <defs>
-            <filter id="filter0_d" x="-39" y="-39" width="1984" height="1093" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-            <feOffset dx="-7" dy="-7"/>
-            <feGaussianBlur stdDeviation="16"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.11759 0 0 0 0 0.2625 0 0 0 0.06 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-            </filter>
-            <linearGradient id="paint0_linear" x1="1587.5" y1="39.4993" x2="1386" y2="797.499" gradientUnits="userSpaceOnUse">
-            <stop offset="0.0001" stop-color="#0F7BFF"/>
-            <stop offset="1" stop-color="#0063DD"/>
-            </linearGradient>
-            </defs>
-        </svg> -->
         <div class="first-block__elements">
             <h1>Best Desktop App for You</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.</p>
@@ -59,7 +39,7 @@
             </div>
         </div>
         <img class="first-block__devices" src="images/Devices.png"/> 
-        <a id="scroll-down-button">
+        <a href="#footer" id="scroll-down-button">
             <img src="images/Arrow1.svg" alt="">
         </a>
         
@@ -87,7 +67,7 @@
 
     <section class="about">
         <div class="about__block1">
-            <img src="images/easy_msg.png" width="558" height="373" alt="">
+            <img class="about__block1__image" src="images/easy_msg.png" alt="">
             <img class="back" src="images/Back1.svg" alt="">
             <div class="about__block__content">
                 <h3>Easy Messaging</h3>
@@ -107,7 +87,7 @@
                     </svg>
                 </a>
             </div>
-            <img src="images/keep_on_touch.png" alt="">
+            <img class="about__block2__image" src="images/keep_on_touch.png" alt="">
             <img class="back" src="images/Back1.svg" alt="">
         </div>
     </section>
@@ -176,7 +156,71 @@
         </div>
     </section>
     <section class="testimonials">
-        <!-- Блок с каруселью -->
+        <div class="testimonials__container">
+
+            <img src="images/Image-testimonials.png" alt="">
+            
+            <div class="testimonials__content">
+                <h2>Trusted By More Than 55M Peoples</h2>
+                <div class="testimonials__content__carusel">
+                    <div class="testimonials__content__carusel__slide first-slide">
+                        <div class="slide__header">
+                            <h4>Raisa Moni</h4>
+                            <p>Envato Customer</p>
+                            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.1875 2.45021C24.291 2.83693 23.3154 3.11525 22.3105 3.22365C23.3538 2.60383 24.1351 1.62462 24.5078 0.469739C23.5288 1.05213 22.4563 1.46051 21.3379 1.67677C20.8704 1.17704 20.3051 0.778937 19.6771 0.507261C19.049 0.235584 18.3718 0.0961569 17.6875 0.0976684C14.9189 0.0976684 12.6924 2.34181 12.6924 5.09572C12.6924 5.48243 12.7393 5.86915 12.8154 6.24122C8.66992 6.02443 4.97266 4.04396 2.51465 1.01173C2.06677 1.77672 1.83207 2.64774 1.83496 3.53419C1.83496 5.26857 2.7168 6.79786 4.06152 7.69728C3.26906 7.66607 2.49514 7.44825 1.80273 7.06154V7.12306C1.80273 9.55177 3.51953 11.5645 5.80762 12.0274C5.378 12.139 4.93606 12.196 4.49219 12.1973C4.16699 12.1973 3.85937 12.1651 3.54883 12.1211C4.18164 14.1016 6.02441 15.5401 8.21875 15.5869C6.50195 16.9317 4.35156 17.7227 2.0166 17.7227C1.59766 17.7227 1.21094 17.708 0.80957 17.6611C3.02441 19.082 5.65234 19.9024 8.48242 19.9024C17.6699 19.9024 22.6973 12.291 22.6973 5.68458C22.6973 5.46779 22.6973 5.25099 22.6826 5.03419C23.6553 4.32228 24.5078 3.44044 25.1875 2.45021Z" fill="#0F7BFF"/>
+                            </svg>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
+                    </div>
+                    <div class="testimonials__content__carusel__slide">
+                        <div class="slide__header">
+                            <h4>Raisa Moni</h4>
+                            <p>Envato Customer</p>
+                            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.1875 2.45021C24.291 2.83693 23.3154 3.11525 22.3105 3.22365C23.3538 2.60383 24.1351 1.62462 24.5078 0.469739C23.5288 1.05213 22.4563 1.46051 21.3379 1.67677C20.8704 1.17704 20.3051 0.778937 19.6771 0.507261C19.049 0.235584 18.3718 0.0961569 17.6875 0.0976684C14.9189 0.0976684 12.6924 2.34181 12.6924 5.09572C12.6924 5.48243 12.7393 5.86915 12.8154 6.24122C8.66992 6.02443 4.97266 4.04396 2.51465 1.01173C2.06677 1.77672 1.83207 2.64774 1.83496 3.53419C1.83496 5.26857 2.7168 6.79786 4.06152 7.69728C3.26906 7.66607 2.49514 7.44825 1.80273 7.06154V7.12306C1.80273 9.55177 3.51953 11.5645 5.80762 12.0274C5.378 12.139 4.93606 12.196 4.49219 12.1973C4.16699 12.1973 3.85937 12.1651 3.54883 12.1211C4.18164 14.1016 6.02441 15.5401 8.21875 15.5869C6.50195 16.9317 4.35156 17.7227 2.0166 17.7227C1.59766 17.7227 1.21094 17.708 0.80957 17.6611C3.02441 19.082 5.65234 19.9024 8.48242 19.9024C17.6699 19.9024 22.6973 12.291 22.6973 5.68458C22.6973 5.46779 22.6973 5.25099 22.6826 5.03419C23.6553 4.32228 24.5078 3.44044 25.1875 2.45021Z" fill="#0F7BFF"/>
+                            </svg>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
+                    </div>
+                    <div class="testimonials__content__carusel__slide">
+                        <div class="slide__header">
+                            <h4>Raisa Moni</h4>
+                            <p>Envato Customer</p>
+                            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.1875 2.45021C24.291 2.83693 23.3154 3.11525 22.3105 3.22365C23.3538 2.60383 24.1351 1.62462 24.5078 0.469739C23.5288 1.05213 22.4563 1.46051 21.3379 1.67677C20.8704 1.17704 20.3051 0.778937 19.6771 0.507261C19.049 0.235584 18.3718 0.0961569 17.6875 0.0976684C14.9189 0.0976684 12.6924 2.34181 12.6924 5.09572C12.6924 5.48243 12.7393 5.86915 12.8154 6.24122C8.66992 6.02443 4.97266 4.04396 2.51465 1.01173C2.06677 1.77672 1.83207 2.64774 1.83496 3.53419C1.83496 5.26857 2.7168 6.79786 4.06152 7.69728C3.26906 7.66607 2.49514 7.44825 1.80273 7.06154V7.12306C1.80273 9.55177 3.51953 11.5645 5.80762 12.0274C5.378 12.139 4.93606 12.196 4.49219 12.1973C4.16699 12.1973 3.85937 12.1651 3.54883 12.1211C4.18164 14.1016 6.02441 15.5401 8.21875 15.5869C6.50195 16.9317 4.35156 17.7227 2.0166 17.7227C1.59766 17.7227 1.21094 17.708 0.80957 17.6611C3.02441 19.082 5.65234 19.9024 8.48242 19.9024C17.6699 19.9024 22.6973 12.291 22.6973 5.68458C22.6973 5.46779 22.6973 5.25099 22.6826 5.03419C23.6553 4.32228 24.5078 3.44044 25.1875 2.45021Z" fill="#0F7BFF"/>
+                            </svg>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
+                    </div>
+                    <div class="testimonials__content__carusel__slide">
+                        <div class="slide__header">
+                            <h4>Raisa Moni</h4>
+                            <p>Envato Customer</p>
+                            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.1875 2.45021C24.291 2.83693 23.3154 3.11525 22.3105 3.22365C23.3538 2.60383 24.1351 1.62462 24.5078 0.469739C23.5288 1.05213 22.4563 1.46051 21.3379 1.67677C20.8704 1.17704 20.3051 0.778937 19.6771 0.507261C19.049 0.235584 18.3718 0.0961569 17.6875 0.0976684C14.9189 0.0976684 12.6924 2.34181 12.6924 5.09572C12.6924 5.48243 12.7393 5.86915 12.8154 6.24122C8.66992 6.02443 4.97266 4.04396 2.51465 1.01173C2.06677 1.77672 1.83207 2.64774 1.83496 3.53419C1.83496 5.26857 2.7168 6.79786 4.06152 7.69728C3.26906 7.66607 2.49514 7.44825 1.80273 7.06154V7.12306C1.80273 9.55177 3.51953 11.5645 5.80762 12.0274C5.378 12.139 4.93606 12.196 4.49219 12.1973C4.16699 12.1973 3.85937 12.1651 3.54883 12.1211C4.18164 14.1016 6.02441 15.5401 8.21875 15.5869C6.50195 16.9317 4.35156 17.7227 2.0166 17.7227C1.59766 17.7227 1.21094 17.708 0.80957 17.6611C3.02441 19.082 5.65234 19.9024 8.48242 19.9024C17.6699 19.9024 22.6973 12.291 22.6973 5.68458C22.6973 5.46779 22.6973 5.25099 22.6826 5.03419C23.6553 4.32228 24.5078 3.44044 25.1875 2.45021Z" fill="#0F7BFF"/>
+                            </svg>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.</p>
+                    </div>
+    
+                    
+                </div>
+                <div class="navigation">
+                    <input type="radio" name="r" id="r1" checked>
+                    <label for="r1" class="bar"></label>
+    
+                    <input type="radio" name="r" id="r2">
+                    <label for="r2" class="bar"></label>
+    
+                    <input type="radio" name="r" id="r3">
+                    <label for="r3" class="bar"></label>
+    
+                    <input type="radio" name="r" id="r4">
+                    <label for="r4" class="bar"></label>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="latest-news">
@@ -222,10 +266,11 @@
             <h2>Try 30 Days Free Trial</h2>
             <p>No credit card reauired</p>
         </div>
-        <a id="free-trial-button2">Get Started <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30.7071 8.70711C31.0976 8.31659 31.0976 7.68342 30.7071 7.2929L24.3431 0.928934C23.9526 0.53841 23.3195 0.53841 22.9289 0.928934C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM-8.74228e-08 9L30 9L30 7L8.74228e-08 7L-8.74228e-08 9Z" fill="white"/>
+        <a id="free-trial-button2">Get Started 
+            <svg width="31" height="16" viewBox="0 0 31 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.7071 8.70711C31.0976 8.31659 31.0976 7.68342 30.7071 7.2929L24.3431 0.928934C23.9526 0.53841 23.3195 0.53841 22.9289 0.928934C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM-8.74228e-08 9L30 9L30 7L8.74228e-08 7L-8.74228e-08 9Z"/>
             </svg>
-            </a>
+        </a>
     </section>
 
     <section class="subscribe">
@@ -239,7 +284,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <span class="footer__copyright">© 2018 Copyright, All Rights Reserved by AppSon</span>
         <span class=footer__navigation><a>Terms&nbsp;&&nbsp;Condition</a><a>Privacy&nbsp;Policy</a><a>Help</a></span>
         <span class="footer__social-media">
@@ -259,7 +304,7 @@
                 </svg>
             </a>             
         </span>
-        <a  id="scroll-up">
+        <a href="#header" id="scroll-up">
             <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="35" cy="35" r="35" transform="rotate(180 35 35)" fill="white"/>
             <path d="M36.0607 12.9393C35.4749 12.3536 34.5251 12.3536 33.9393 12.9393L24.3934 22.4853C23.8076 23.0711 23.8076 24.0208 24.3934 24.6066C24.9792 25.1924 25.9289 25.1924 26.5147 24.6066L35 16.1213L43.4853 24.6066C44.0711 25.1924 45.0208 25.1924 45.6066 24.6066C46.1924 24.0208 46.1924 23.0711 45.6066 22.4853L36.0607 12.9393ZM36.5 57L36.5 14L33.5 14L33.5 57L36.5 57Z" fill="#0063DD"/>
