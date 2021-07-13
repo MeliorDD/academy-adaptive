@@ -301,7 +301,7 @@ header #sign-up-button:hover {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  color: #0063DD;
+  color: #0063DD !important;
 }
 .about a svg {
   -webkit-transform: translateY(2px);
@@ -783,7 +783,7 @@ header #sign-up-button:hover {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  color: #0063DD;
+  color: #0063DD !important;
 }
 .latest-news .latest-news__posts .latest-news__posts__post1 #continue-reading svg {
   -webkit-transform: translateY(2px);

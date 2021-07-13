@@ -27,7 +27,7 @@ $colorTwo: #0063DD;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-    color: $colorTwo;
+    color: $colorTwo !important;
     svg{
         transform: translateY(2px);
         margin-left: 15px;
@@ -54,6 +54,7 @@ $colorTwo: #0063DD;
     font-family: 'Quicksand', sans-serif;
     scroll-behavior: smooth;
 }
+
 ul{
     list-style: none;
 }
@@ -275,14 +276,12 @@ header{
         .about__block__content{
             padding-top: 94px;
             max-width: 476px;
-            //min-width: 350px;
         }
         .back{
             position: absolute;
             top:-120px;
             left: -80px;
             z-index: 2;
-            
         }
     }
     .about__block2{
@@ -305,7 +304,6 @@ header{
             top:-20px;
             right: -180px;
             z-index: -1;
-            
         }
     }
     
