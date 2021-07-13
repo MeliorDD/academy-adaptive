@@ -73,43 +73,45 @@ header{
     left: 0;
     width: 100%;
     z-index: 10;
-    .header__container{
+    .navbar{
+        padding: 0;
+    }
+    .container-fluid{
         max-width: 1310px;
-        margin: 0 auto;
+        width: 100%;
         padding: 0 15px;
         display: flex;
-        justify-content: space-between;
-    }
-    .header__logo{
-        min-width: 179px;
-        height: 100px;
-        margin-right: 20px;
-        border-bottom-right-radius: 21.5px;
-        border-bottom-left-radius: 21.5px;
-        background-color: $colorOne;
-        font-weight: 700;
-        font-size: 36px;
-        color: white;
-        text-align: center;
-        padding-top: 25px;
-    }
-    .header__menu{
-        display: flex;
+        justify-content: center;
+        align-items: center;
+        .header__logo{
+            min-width: 179px;
+            height: 100px;
+            margin-right: 20px;
+            border-bottom-right-radius: 21.5px;
+            border-bottom-left-radius: 21.5px;
+            background-color: $colorOne;
+            font-weight: 700;
+            font-size: 36px;
+            color: white;
+            text-align: center;
+            padding-top: 25px;
+        }
         ul{
             width: 355px;
-            margin-top: 40px;
             display: flex;
             justify-content: space-between;
+            margin-right: 52px;
             text-transform: uppercase;
-            cursor: pointer;
             font-size: 16px;
-            font-style: normal;
             font-weight: 500;
             line-height: 20px;
-            letter-spacing: 0em;
-            text-align: left;
             li{
+                margin: 20px 0;
+            }
+            a{
+                color: #929292;
                 transition: all .4s ease;
+                
                 &:hover{
                     color: $colorOne;
                 }
@@ -118,7 +120,9 @@ header{
     }
     #sign-up-button{
         @include button;
-        margin: 25px 0 0 52px;
+        padding: 0;
+        background-color: white;
+        margin-right: 0;
     }
 }
 
@@ -816,6 +820,13 @@ footer{
 }
 
 @media (max-width:1059px){
+    header{
+        position: relative;
+        margin-bottom: 88px;
+    }
+    .first-block{
+        padding-top: 0;
+    }
     .price__container{
         flex-direction: column;
         align-items: center;

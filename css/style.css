@@ -28,18 +28,24 @@ header {
   width: 100%;
   z-index: 10;
 }
-header .header__container {
+header .navbar {
+  padding: 0;
+}
+header .container-fluid {
   max-width: 1310px;
-  margin: 0 auto;
+  width: 100%;
   padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-header .header__logo {
+header .container-fluid .header__logo {
   min-width: 179px;
   height: 100px;
   margin-right: 20px;
@@ -52,34 +58,29 @@ header .header__logo {
   text-align: center;
   padding-top: 25px;
 }
-header .header__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-header .header__menu ul {
+header .container-fluid ul {
   width: 355px;
-  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: 52px;
   text-transform: uppercase;
-  cursor: pointer;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
 }
-header .header__menu ul li {
+header .container-fluid ul li {
+  margin: 20px 0;
+}
+header .container-fluid ul a {
+  color: #929292;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-header .header__menu ul li:hover {
+header .container-fluid ul a:hover {
   color: #0F7BFF;
 }
 header #sign-up-button {
@@ -96,7 +97,9 @@ header #sign-up-button {
   text-transform: uppercase;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  margin: 25px 0 0 52px;
+  padding: 0;
+  background-color: white;
+  margin-right: 0;
 }
 header #sign-up-button:hover {
   background-color: #0F7BFF;
@@ -1037,6 +1040,15 @@ footer #scroll-up:hover {
   }
 }
 @media (max-width: 1059px) {
+  header {
+    position: relative;
+    margin-bottom: 88px;
+  }
+
+  .first-block {
+    padding-top: 0;
+  }
+
   .price__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
