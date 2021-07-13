@@ -46,8 +46,7 @@ header .container-fluid {
           align-items: center;
 }
 header .container-fluid .header__logo {
-  min-width: 179px;
-  height: 100px;
+  padding: 18px 23px 25px 23px;
   margin-right: 20px;
   border-bottom-right-radius: 21.5px;
   border-bottom-left-radius: 21.5px;
@@ -56,16 +55,19 @@ header .container-fluid .header__logo {
   font-size: 36px;
   color: white;
   text-align: center;
-  padding-top: 25px;
 }
 header .container-fluid ul {
-  width: 355px;
+  max-width: 572px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 52px;
   text-transform: uppercase;
   font-size: 16px;
@@ -337,7 +339,6 @@ header #sign-up-button:hover {
 .about .about__block1 .about__block__content {
   padding-top: 94px;
   max-width: 476px;
-  min-width: 350px;
 }
 .about .about__block1 .back {
   position: absolute;
@@ -666,6 +667,27 @@ header #sign-up-button:hover {
           box-shadow: 0px 4px 20px rgba(0, 70, 156, 0.08);
   border-radius: 5px;
 }
+.testimonials .testimonials__content__carusel__slide .slide__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+.testimonials .testimonials__content__carusel__slide .slide__header h4 {
+  margin-bottom: 10px;
+}
+.testimonials .testimonials__content__carusel__slide .slide__header svg {
+  margin-right: 39px;
+}
+.testimonials .testimonials__content__carusel__slide .slide__header p {
+  margin: 0;
+}
 .testimonials .swiper-slide {
   width: auto;
 }
@@ -726,11 +748,16 @@ header #sign-up-button:hover {
   display: -ms-flexbox;
   display: flex;
 }
+.latest-news .latest-news__posts a:hover {
+  color: #0063DD;
+}
 .latest-news .latest-news__posts .latest-news__posts__post1 {
   max-width: 558px;
   margin-right: 30px;
 }
 .latest-news .latest-news__posts .latest-news__posts__post1 img {
+  max-height: 290px;
+  max-width: 100%;
   margin-bottom: 30px;
   -webkit-box-shadow: 0px 4px 20px rgba(0, 70, 156, 0.08);
           box-shadow: 0px 4px 20px rgba(0, 70, 156, 0.08);
@@ -741,7 +768,6 @@ header #sign-up-button:hover {
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
-  color: #0063DD;
 }
 .latest-news .latest-news__posts .latest-news__posts__post1 p {
   margin-bottom: 35px;
@@ -810,18 +836,24 @@ header #sign-up-button:hover {
   padding-top: 133px;
   padding-bottom: 113px;
   background-color: #F5FCFD;
+}
+.free-trial .free-trial__container {
+  max-width: 814px;
+  width: 100%;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
 }
 .free-trial .free-trial__text {
-  margin-right: 154px;
+  margin-right: 20px;
 }
 .free-trial h2 {
   margin-bottom: 25px;
@@ -956,6 +988,13 @@ footer {
           justify-content: center;
   padding-right: 20px;
 }
+footer .footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1144px;
+  width: 100%;
+}
 footer .footer__text {
   max-width: 920px;
   padding-left: 20px;
@@ -1035,7 +1074,7 @@ footer #scroll-up:hover {
     display: none;
   }
 
-  .testimonial__img {
+  .testimonials .testimonial__img {
     display: none;
   }
 }
@@ -1108,7 +1147,7 @@ footer #scroll-up:hover {
     padding-top: 30px;
   }
 
-  .latest-news__posts {
+  .latest-news .latest-news__posts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1117,8 +1156,9 @@ footer #scroll-up:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .latest-news__posts .latest-news__posts__post1 {
+  .latest-news .latest-news__posts .latest-news__posts__post1 {
     margin-bottom: 50px;
+    margin-right: 0px;
   }
 
   .features .features__cards .features__cards__card:first-child {
@@ -1166,6 +1206,7 @@ footer #scroll-up:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0 20px;
   }
   .features .features__cards .features__cards__card {
     max-width: 500px;
@@ -1187,8 +1228,98 @@ footer #scroll-up:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0;
   }
   .how-does-it-works__list .line {
     display: none;
+  }
+  .how-does-it-works__list .how-does-it-works__list__item {
+    max-width: 80%;
+  }
+
+  footer .footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer__content .footer__social-media {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 580px) {
+  header .container-fluid {
+    padding-left: 0;
+  }
+  header .container-fluid .header__logo {
+    font-size: 24px;
+  }
+
+  .first-block .first-block__elements .first-block__elements__buttons {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .first-block .first-block__elements .first-block__elements__buttons #download-button {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .price .price__pricing-plan a {
+    max-width: 140px;
+  }
+
+  .testimonials h2 {
+    max-width: 300px;
+  }
+  .testimonials .testimonials__content__carusel__slide {
+    max-width: 300px;
+  }
+
+  .latest-news h2 {
+    text-align: center;
+  }
+  .latest-news .latest-news__posts__others p {
+    display: none;
+  }
+
+  .free-trial__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .free-trial__container .free-trial__text {
+    margin-right: 0;
+  }
+
+  .subscribe form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 90%;
+  }
+  .subscribe form input {
+    max-width: 300px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+  }
+  .subscribe form button {
+    border-radius: 25px;
   }
 }
